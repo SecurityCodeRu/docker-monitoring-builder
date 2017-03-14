@@ -5,8 +5,8 @@ ENV DEBIAN_FRONTEND noninteractive
 ADD * /home/
 
 RUN chmod +x /home/run.sh && \
-	\
-	echo en_US.UTF-8 UTF-8 > /etc/locale.gen && \
+    \
+    echo en_US.UTF-8 UTF-8 > /etc/locale.gen && \
     echo ru_RU.UTF-8 UTF-8 >> /etc/locale.gen && \
     \
     apt-get update && \
@@ -25,3 +25,5 @@ ENV LANGUAGE ru_RU.UTF-8
 EXPOSE 22
 
 VOLUME ["/jenkins"]
+
+CMD /home/run.sh
