@@ -12,6 +12,7 @@ RUN chmod +x /home/run.sh && \
     apt-get update && \
     apt-get install -y --no-install-recommends locales git openssh-server openjdk-8-jdk less nano wget && \
     apt-get install -y --no-install-recommends postgresql-server-dev-all postgresql-common libpq-dev && \
+    apt-get install -y --no-install-recommends fakeroot lintian && \
     \
     useradd -m jenkins && \
     echo "jenkins:jenkins" | chpasswd && \
